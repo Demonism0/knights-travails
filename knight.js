@@ -39,27 +39,35 @@ const Search = (() => {
     oldMoves.push(`${node.coords}`);
     if (node.firstP !== null && !oldMoves.includes(`${node.firstP}`)) {
       queue.push(possibleMoves(node.firstP, node.count, node.moveHistory));
+      oldMoves.push(`${node.firstP}`);
     }
     if (node.secondP !== null && !oldMoves.includes(`${node.secondP}`)) {
       queue.push(possibleMoves(node.secondP, node.count, node.moveHistory));
+      oldMoves.push(`${node.secondP}`);
     }
     if (node.thirdP !== null && !oldMoves.includes(`${node.thirdP}`)) {
       queue.push(possibleMoves(node.thirdP, node.count, node.moveHistory));
+      oldMoves.push(`${node.thirdP}`);
     }
     if (node.fourthP !== null && !oldMoves.includes(`${node.fourthP}`)) {
       queue.push(possibleMoves(node.fourthP, node.count, node.moveHistory));
+      oldMoves.push(`${node.fourthP}`);
     }
     if (node.fifthP !== null && !oldMoves.includes(`${node.fifthP}`)) {
       queue.push(possibleMoves(node.fifthP, node.count, node.moveHistory));
+      oldMoves.push(`${node.fifthP}`);
     }
     if (node.sixthP !== null && !oldMoves.includes(`${node.sixthP}`)) {
       queue.push(possibleMoves(node.sixthP, node.count, node.moveHistory));
+      oldMoves.push(`${node.sixthP}`);
     }
     if (node.seventhP !== null && !oldMoves.includes(`${node.seventhP}`)) {
       queue.push(possibleMoves(node.seventhP, node.count, node.moveHistory));
+      oldMoves.push(`${node.seventhP}`);
     }
     if (node.eighthP !== null && !oldMoves.includes(`${node.eighthP}`)) {
       queue.push(possibleMoves(node.eighthP, node.count, node.moveHistory));
+      oldMoves.push(`${node.eighthP}`);
     }
 
     return levelOrder(queue.shift(), target);
